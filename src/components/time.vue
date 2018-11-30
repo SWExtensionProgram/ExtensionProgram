@@ -22,12 +22,15 @@
       <button v-on:click="change_show_state(1)">todo</button>
     </div>
     <div v-if="todoShow" class="list-layout" style="right: calc(3% + 121px);"></div>
-    <div v-if="memoShow" class="list-layout"></div>
+    <div v-if="memoShow" class="list-layout">
+      <memo></memo>
+    </div>
   </div>
 </template>
 
 <script>
 var moment = require("moment-timezone");
+import memo from "./memo/MemoLayout.vue";
 export default {
   name: "Time",
   data() {
@@ -40,7 +43,9 @@ export default {
       memoShow: false
     };
   },
-  components: {},
+  components: {
+    memo
+  },
   beforeCreate: function() {},
   mounted: function() {
     this.show_time();
