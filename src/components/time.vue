@@ -21,18 +21,15 @@
       <span class="list-show-bar">|</span>
       <button v-on:click="change_show_state(1)">todo</button>
     </div>
-    <div v-if="todoShow" class="list-layout" style="right: 15%;">
-      <Hello></Hello>
-    </div>
+    <div v-if="todoShow" class="list-layout" style="right: 15%;"></div>
     <div v-if="memoShow" class="list-layout"></div>
   </div>
 </template>
 
 <script>
 var moment = require("moment-timezone");
-import Hello from "./HelloWorld.vue";
 export default {
-  name: "HelloWorld",
+  name: "Time",
   data() {
     return {
       time: "",
@@ -43,9 +40,7 @@ export default {
       memoShow: false
     };
   },
-  components: {
-    Hello
-  },
+  components: {},
   beforeCreate: function() {},
   mounted: function() {
     this.show_time();
@@ -159,7 +154,7 @@ export default {
 }
 
 .list-show-layout button {
-  border: 3px black solid;
+  border: 0px;
   outline: 0px;
   float: right;
   font-size: 30px;
