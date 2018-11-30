@@ -21,7 +21,7 @@
       <span class="list-show-bar">|</span>
       <button v-on:click="change_show_state(1)">todo</button>
     </div>
-    <div v-if="todoShow" class="list-layout" style="right: 15%;"></div>
+    <div v-if="todoShow" class="list-layout" style="right: calc(3% + 121px);"></div>
     <div v-if="memoShow" class="list-layout"></div>
   </div>
 </template>
@@ -183,7 +183,7 @@ export default {
   width: 280px;
   height: 200px;
   bottom: calc(55px + 5%);
-  right: 5%;
+  right: calc(3% + 23px);
   border-radius: 15px;
   z-index: 3;
 }
